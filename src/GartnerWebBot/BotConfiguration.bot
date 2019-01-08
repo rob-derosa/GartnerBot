@@ -1,0 +1,95 @@
+{
+    "name": "GartnerWebBot",
+    "description": "",
+    "services": [
+        {
+            "type": "abs",
+            "appId": "43624e79-a678-44b2-a0d4-932ed96a8b85",
+            "id": "1",
+            "name": "GartnerWebBot",
+            "resourceGroup": "GartnerWebBot",
+            "serviceName": "GartnerWebBot",
+            "subscriptionId": "b28c99c8-06ab-46c2-9e66-cf1874299828",
+            "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        },
+        {
+            "type": "blob",
+            "connectionString": "DefaultEndpointsProtocol=https;AccountName=gartnerwebbot84ec;AccountKey=sE6AkY8m1xo1HDCQTtt0W7FYFDXhikuspaxjcbVtZ9zoh4aH1dJ+OsMP4uNsndmAbJpea7FrV0fwLL6yAPBbdw==;",
+            "id": "2",
+            "resourceGroup": "GartnerWebBot",
+            "serviceName": "gartnerwebbot84ec",
+            "subscriptionId": "b28c99c8-06ab-46c2-9e66-cf1874299828",
+            "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        },
+        {
+            "type": "endpoint",
+            "appId": "43624e79-a678-44b2-a0d4-932ed96a8b85",
+            "appPassword": "gd8^tb{mkvilh!;d",
+            "endpoint": "http://localhost:3978/api/messages",
+            "id": "3",
+            "name": "development"
+        },
+        {
+            "type": "endpoint",
+            "appId": "43624e79-a678-44b2-a0d4-932ed96a8b85",
+            "appPassword": "gd8^tb{mkvilh!;d",
+            "endpoint": "https://gartner-bot.azurewebsites.net/api/messages",
+            "id": "4",
+            "name": "production"
+        },
+        {
+            "type": "appInsights",
+            "apiKeys": {},
+            "applicationId": "aa00638e-f49f-4530-b64c-3914c581bebe",
+            "id": "5",
+            "instrumentationKey": "5bb883ea-a5c5-4ecb-bc6b-afb70a7f8b07",
+            "resourceGroup": "GartnerWebBot",
+            "serviceName": "GartnerWebBotqq4vz5",
+            "subscriptionId": "b28c99c8-06ab-46c2-9e66-cf1874299828",
+            "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        },
+        {
+            "type": "qna",
+            "endpointKey": "293605f7-4e95-48ce-b54a-bbc44dae6c6d",
+            "hostname": "https://gartnerfaqs.azurewebsites.net/qnamaker",
+            "id": "2b79b3ca-af80-4bd1-9f8e-4a733835bf97",
+            "kbId": "2b79b3ca-af80-4bd1-9f8e-4a733835bf97",
+            "name": "Gartner - Vendor Briefings",
+            "subscriptionKey": "061df6df0a564793b6d0a70ee7d21edf"
+        },
+        {
+            "type": "qna",
+            "endpointKey": "293605f7-4e95-48ce-b54a-bbc44dae6c6d",
+            "hostname": "https://gartnerfaqs.azurewebsites.net/qnamaker",
+            "id": "6badc119-f547-4905-b0dc-d3d569214260",
+            "kbId": "6badc119-f547-4905-b0dc-d3d569214260",
+            "name": "Gartner - Magic Quadrant",
+            "subscriptionKey": "061df6df0a564793b6d0a70ee7d21edf"
+        },
+        {
+            "type": "dispatch",
+            "appId": "9fa25edc-317e-41af-8e70-ac9bf7cfeb32",
+            "authoringKey": "b95b75f1b7de44ecb90e25ca758008cc",
+            "id": "9fa25edc-317e-41af-8e70-ac9bf7cfeb32",
+            "name": "GartnerWebBotDispatch",
+            "region": "westus",
+            "serviceIds": [],
+            "subscriptionKey": "b95b75f1b7de44ecb90e25ca758008cc",
+            "version": "Dispatch"
+        },
+        {
+            "type": "luis",
+            "appId": "b0a3e888-696b-4a4b-9301-59170229aaa9",
+            "authoringKey": "b95b75f1b7de44ecb90e25ca758008cc",
+            "id": "b0a3e888-696b-4a4b-9301-59170229aaa9",
+            "name": "GartnerInformationDiscovery",
+            "region": "westus",
+            "subscriptionKey": "b95b75f1b7de44ecb90e25ca758008cc",
+            "version": "0.1"
+        }
+    ],
+    "padlock": "",
+    "version": "2.0",
+    "overrides": null,
+    "path": "/Volumes/Data/Projects/GartnerBot/src/GartnerWebBot/BotConfiguration.bot"
+}

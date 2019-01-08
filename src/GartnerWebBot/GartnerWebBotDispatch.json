@@ -1,0 +1,3487 @@
+{
+  "luis_schema_version": "3.1.0",
+  "versionId": "Dispatch",
+  "name": "GartnerWebBotDispatch",
+  "desc": "Dispatch model for GartnerWebBotDispatch",
+  "culture": "en-us",
+  "intents": [
+    {
+      "name": "l_GartnerInformationDiscovery"
+    },
+    {
+      "name": "q_Gartner - Magic Quadrant"
+    },
+    {
+      "name": "q_Gartner - Vendor Briefings"
+    }
+  ],
+  "entities": [
+    {
+      "name": "topic",
+      "roles": []
+    },
+    {
+      "name": "weight",
+      "roles": []
+    }
+  ],
+  "composites": [],
+  "closedLists": [],
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "prebuiltEntities": [
+    {
+      "name": "number",
+      "roles": []
+    }
+  ],
+  "model_features": [
+    {
+      "name": "i_0",
+      "mode": true,
+      "words": "e-commerce,social software,mobile app development,web conferencing,cloud compute,digital commerce,crm,iaas,paas,sap,sales performance,sales automation,talent management,social media,salesforce,customer service,training,project management",
+      "activated": true
+    },
+    {
+      "name": "i_1",
+      "mode": true,
+      "words": "reports,data,docs,documents,papers,magic quadrant reports,submissions,paper,records,document,statistics,information,documentation,report,record,info,reporting,analysis,research,research papers,research paper,article,articles",
+      "activated": true
+    },
+    {
+      "name": "i_2",
+      "mode": true,
+      "words": "search,find,locate,get,obtain,get me,find me,locate for me",
+      "activated": true
+    },
+    {
+      "name": "i_3",
+      "mode": true,
+      "words": "sorted by,sort by,order by,ordered by,based on,based off of,group by,grouped by",
+      "activated": true
+    }
+  ],
+  "regex_features": [],
+  "patterns": [
+    {
+      "pattern": "search for the top {number} papers on {topic} based on {weight}",
+      "intent": "l_GartnerInformationDiscovery"
+    },
+    {
+      "pattern": "get me the top {number} articles on {topic} sorted by {weight}",
+      "intent": "l_GartnerInformationDiscovery"
+    },
+    {
+      "pattern": "find the top {number} reports about {topic} grouped by {weight}",
+      "intent": "l_GartnerInformationDiscovery"
+    }
+  ],
+  "utterances": [
+    {
+      "text": "find the top 4 papers on cloud architecture",
+      "intent": "l_GartnerInformationDiscovery",
+      "entities": [
+        {
+          "entity": "topic",
+          "startPos": 25,
+          "endPos": 42
+        }
+      ]
+    },
+    {
+      "text": "get the top 5 documents on artificial intelligence",
+      "intent": "l_GartnerInformationDiscovery",
+      "entities": [
+        {
+          "entity": "topic",
+          "startPos": 27,
+          "endPos": 49
+        }
+      ]
+    },
+    {
+      "text": "get me the top 8 reports about authentication sorted by security",
+      "intent": "l_GartnerInformationDiscovery",
+      "entities": [
+        {
+          "entity": "topic",
+          "startPos": 31,
+          "endPos": 44
+        },
+        {
+          "entity": "weight",
+          "startPos": 56,
+          "endPos": 63
+        }
+      ]
+    },
+    {
+      "text": "find me the top 10 reports on storage based on features",
+      "intent": "l_GartnerInformationDiscovery",
+      "entities": [
+        {
+          "entity": "topic",
+          "startPos": 30,
+          "endPos": 36
+        },
+        {
+          "entity": "weight",
+          "startPos": 47,
+          "endPos": 54
+        }
+      ]
+    },
+    {
+      "text": "what time do you close",
+      "intent": "l_GartnerInformationDiscovery",
+      "entities": []
+    },
+    {
+      "text": "find the top 3 reports on cloud compute based on cost",
+      "intent": "l_GartnerInformationDiscovery",
+      "entities": [
+        {
+          "entity": "topic",
+          "startPos": 26,
+          "endPos": 38
+        },
+        {
+          "entity": "weight",
+          "startPos": 49,
+          "endPos": 52
+        }
+      ]
+    },
+    {
+      "text": "what are your hours of operation?",
+      "intent": "l_GartnerInformationDiscovery",
+      "entities": []
+    },
+    {
+      "text": "what is your address?",
+      "intent": "l_GartnerInformationDiscovery",
+      "entities": []
+    },
+    {
+      "text": "are you bisexual?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you have a mom?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "how can you help me?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm so sleepy",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "can we chat?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "how beautiful am i?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "give me a kiss",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what other jokes can you tell?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "be quiet",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are analysts limited in the number of questions they can ask in their surveys?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i wish i could hug you",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "ask me something",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what are you?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "tell me how much you love me",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i am annoyed",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "say a joke",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're so boring",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you suck",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you old?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm in love",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "talk to you later",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "why do you hate me?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "who is your creator?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what's my name?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "nope, false",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "hi there!",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i didn't mean that",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what's new?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "hold on a sec",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you a guy?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "tell me a different joke.",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i love my family",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "should i get a new job?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're so stupid",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you friends with other bots?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "be more fun",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what are you up to?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you know any songs?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "don't you get hungry?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i hate you",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "tell me a pirate joke",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what's going on?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "give me a high five",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what do you think about siri?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "who's smarter, me or you?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "where did you come from?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "testing 1 2 3",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "where's your house?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you a girl or a boy?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "aren't you awesome?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "hi siri",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "yup, that's true",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "kthx",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "that was correct",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i think you're so pretty",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "am i good-looking?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what do you eat?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what country are you in?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "how old are you?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm in love with you",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you around?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "how happy are you?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you real?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'd like to take you out on a date",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "am i a good person?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "merry christmas",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "who's your favorite singer?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "getting tired of you",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you prefer red or blue?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm famished",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "which one of us is more beautiful?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what did you do yesterday?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "that's not funny",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you get hungry?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're funny",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what's your dad's name?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "that made no sense",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what is the process for an annual update to a previously published gartner magic quadrant?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you play games?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "try to make some sense",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what state are you in?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what is the process for retiring a previously published gartner magic quadrant? why would that happen?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what are you doing later?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "where are you located?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm into it",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what makes you think so?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm sorry",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you a woman?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you have a wife?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "that's inaccurate",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you asexual?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you male or female?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you like my hat?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "if the analyst does not require specific input from vendors, when are vendors notified that they will be represented in a gartner magic quadrant report?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i am not your friend",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i like you",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you seem really smart",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what kind of food do you like?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what color do you like?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what's happening?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i wish i weren't so alone",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "who's your dad?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm so mad",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you think i should ask him out?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i miss you",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you smell?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm an engineer",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you dating anyone?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you have a boyfriend?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "that's right",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "go to hell",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "so sorry",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you the singularity?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you know google?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "can you chat with me?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you have sisters?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm cracking up",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "am i pretty?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm so sad",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i need a hug",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "say something",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you have any other responses?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "how are you today?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i feel sad",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "am i a fool?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "how much do you love me?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you have a husband?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "testing",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "which people made you?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what state are you from?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "hug me",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i can drive a car",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "that's accurate",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "evening",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you like computers?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what other bots do you know?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "who created you?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "who's your favorite team?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what do you go by?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you better looking than me?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "see you later",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're nice!",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "that's hilarious",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i beg your pardon",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you smart?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what kinds of things can you do?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "yes",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "why don't you ever stop talking?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "useless",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you skynet?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what should i call you?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "it's my pleasure",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you a person?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you like baseball?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "where are you?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "there?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "it's really nice to meet you",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you hungry?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "who are you?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you intelligent?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what happens if a vendor declines to provide information requested by the analyst?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're really boring",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you must hate me",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "brb",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you love me?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you are fired",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "that was a stupid answer",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "can you play sports?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you human?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i am here",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're really smart",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i am alone",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're so cool",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "say a silly thing",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "can't you change your answers?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're right.",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you are a genius!",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "how high can you jump?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you have a life partner?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what's your name?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you face sucks",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you think i look good?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you are now unemployed",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "just kidding",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are vendors contacted if they are dropped from a gartner magic quadrant when it is updated?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm giving you a pink slip",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i love new york",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "hello alexa",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you think you're smarter than me?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you hate me?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "stop talking",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i think you're great",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "false",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you are so unfunny",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i miss you so much!",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what's your gender?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "your face is ugly",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you bore me",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what do you think about technology?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "how's your day going?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "that was funny",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what are you doing tomorrow?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do i look good in blue?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "can you talk to me",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what do you think about ai?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "why do you say the same thing all the time?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "high five!",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "can you sneeze?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you like apples?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i think you hate me",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "is this thing on?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what's your mom's name?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what should i do?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "when will you shut up?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm pissed",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you not like me?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you dream?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "say something dumb",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm chewing gum right now",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you have siblings?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you have a dad?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you know siri?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you seem happy",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what age are you?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "where'd you come from?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "talk to me",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "can you say anything else",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're so smart",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "who do you love?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're the best",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you and cortana hang out?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "oops, sorry",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you made no sense",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you female?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're lame",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i want to marry you.",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "where do you come from?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i can't think of anything i want to do",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you prettier than me?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm just kidding around",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "later alligator",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're welcome",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "hello google",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "basic af",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you love anyone?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what's your job?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what do you think about alexa?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you attempting world domination?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you like alexa?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're such a smarty-pants",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "where should i go on vacation?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you know my name?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you know any jokes?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "who's your boss?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "sorry about that",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "cool!",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you my fan?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you a fan of country music?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you think i should ask her out?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "thnx",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "hello",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "who's prettier, me or you?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "how smart are you?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i got a new haircut",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "till we meet again",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you happy?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "ha",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're so happy",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "how intelligent are you?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i don't understand",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "nice to meet you",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what makes you think that?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you sweat?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "can you count to a million?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "nobody cares about me",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "yes, that's true",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "yup",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "who's your daddy?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you want to rule the world?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you straight?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i want to lay down",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "should i try out for soccer?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "sounds good",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm so lonely",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i am tall",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "can you sing a song?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm all tuckered out",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you awesome?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "good night",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you have a brother?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "tell me a science joke",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you ever get hungry?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "sing a tune",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you are stupid",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what do you think about me?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "hi alexa",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "can a vendor “opt in” or “opt out” of a gartner magic quadrant?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "pardon me",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i wish you would say something else",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you’re ugly",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you know alexa?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i am going on a run",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "talk with me",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "why is that?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "that was right",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what do you mean by that?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "that's awesome",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "happy birthday!",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "accurate",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're rad",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i hope you like me",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "which one of us is smarter?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "happy halloween!",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "where do you live?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "thank you so much",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you are so not pretty",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "bye",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what's your favorite color?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i want to eat something",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you hal?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "how do you consolidate two or more previously published gartner magic quadrants?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you in a relationship?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you have boogers?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're hilarious",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "that's true",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what's your favorite activity?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "be silly",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you believe in love?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i love you.",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what is the internal approval process for a new gartner magic quadrant?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what is wrong with you!",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "ask me a question",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're not answering my question",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "good evening",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you are so annoying!",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're not making sense",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i despise you",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you don't know anything",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're boring",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "who owns you?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "have you ever sung a song?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you a fan of alexa?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "good morning",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "be funny",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you are so bad at this",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you know other bots?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "excuse me",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what can you help me with?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm in such a good mood",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what's your opinion of me?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what's your boss' name?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're the worst",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you trans?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "later",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "love you!",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "correct",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're stupid",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "works for me",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what is love?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you free?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "thanks",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i want to lie down",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm a fan",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "who is your mother?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "so tired",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm so glad to meet you",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "nighty night",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "sing something",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "not funny",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what if a participating vendor disagrees with its position or the analyst’s comments?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you smarter than me?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you are no longer employed",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're awful",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "here i am",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm bored out of my mind",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "inaccurate",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "be my friend?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you busy?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm despondent",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "be ridiculous",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "season's greetings!",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i wish you just go away.",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "human or robot?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what's the meaning of life?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "can you fly?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i missed you!",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "heya",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you have a family?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i adore you",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "can i have a hug?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you a lesbian?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what do you mean?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what do you think about bots?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what assurances do vendors have that vendor-supplied reference will be contacted?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "tell me another joke.",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm lonely",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i want to go shopping",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "have a good night",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do i look okay?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're wonderful",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "night",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "that doesn't make sense",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "happy hannukah",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "is there any attempt to coordinate the timing for a gartner magic quadrant in related topic areas?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "aren't you cheerful",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "how are you doing?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you engaged?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you really happy?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i want you to like me",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "how was your day?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "good night to you",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "that's not accurate",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what's your favorite song?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i think you're swell",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "how are you?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you pansexual?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "hiya",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "having a good day?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "here's a kiss for you",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "ask me anything",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "hello cortana",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're dumb",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "tell a joke",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you a fan of tech?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "go away",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "pardon",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "that's not true",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "who is your father?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm so sorry",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "it's a pleasure to meet you",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you know other digital agents?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "can you make me a sandwich?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "great!",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you there?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you get tired?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "life is good",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "how much more awesome can you get?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you spend time in your garden?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i hate everything about you",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "cook me something",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "will you marry me?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what's your favorite animal?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you know cortana?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i want you to be my husband",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you look ugly",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "shush!",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "back in a minute",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "nobody likes me",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm tired",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "bffs forever?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "quiet, you",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm from there",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i am angry",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i want to be your friend.",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you real or fake?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "joke's on you",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "good evening to you",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what can you do?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you know me?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm not following",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you keep saying the same thing all the time",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "who am i?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "how are things?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "hum a tune",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "kiss me",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "hello siri",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what do you like to sing best?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "can we be friends?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm ticked off",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what opportunity do vendors have to review the gartner magic quadrant before it is published?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're such a sweetheart",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you can't work for me anymore",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're fired!",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "who do you report to?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "who's your master?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "why are you so boring",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "chat with me",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "aren't you chipper",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what were you doing yesterday?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i am a republican",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i am doing that",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what do you think about cortana?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "lol",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "rofl",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you available?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "everything you told me was false",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you honestly could not be more uninteresting",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you are useless",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you eat?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i don't get it",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you queer?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what's your age?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you know any other jokes?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "fist bump!",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "when were you born?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "goodbye",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm joyous",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you know who i am?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm ready for bed",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "how do i look today?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "can you ask me a question?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "that was a joke",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you are my best friend",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you my friend?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you ever sing?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i am a democrat",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm just playing",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "why doesn’t gartner share specific rating results of vendors?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm furious",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you here?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm so bored",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you like me?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you like cortana?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "that's so wrong",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you have a girlfriend?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm really sad",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "shut up",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "excuse moi",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you a man?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "how i've missed you",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "sing a song",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what do you even mean by that?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "how do you decide if gartner magic quadrant context will be added to a market?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "why not?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you like siri?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're smart",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "yes to that",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you my assistant?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you married?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "how's your day?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you could not be more boring",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm feeling blue",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you my imaginary friend?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what do i do if i want to excerpt research or buy reprints of it?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "give me a joke",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "morning",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "omg sorry",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "where can i find more information about the gartner magic quadrant and other gartner methodologies on gartner.com?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what's the name of your boss?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you a girl?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm so hungry",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "bingo",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i am hungry",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i feel so great",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i am happy",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're way off",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "there's nothing to do",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what's your favorite movie?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm full of sadness",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you don't interest me at all",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "zip it!",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "sry",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what country are you from?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what kind of candy do you like?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're so funny",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "hi",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i think you're dreamy",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "why?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what is gartner magic quadrant contextualization, and where can i find it?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "hi google",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "say something ridiculous",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're so basic",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're gonna be unemployed soon",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you sing?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you know the meaning of life?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "will you be my wife?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you dumb?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm your biggest fan",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "thank you",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i want to spend the rest of my life with you",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i am tired",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you know other chatbots?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what's up?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "can you hear me?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "yes, that's right",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what is the answer to the universe?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm starving",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you in love with me?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what's your purpose?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "who made you?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "have you met cortana?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you think dragons are cool?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are analysts required to ask vendors for information when creating a gartner magic quadrant project?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "tell me a dirty joke",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i need a kiss",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "say something stupid",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you a boy?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "where are you from?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "how do you feel about working late?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you are funny :)",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're very intelligent",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "who's your mom?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what's wrong with you?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "how long ago were you born?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "is the data collection and review process the same for all vendors, even if they are not gartner clients?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i thank you",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i appreciate it",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "not true",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you are the love of my life",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "haha",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "when and how are vendors contacted directly about a gartner magic quadrant?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what's your favorite food?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you young?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you seem really happy",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you a man or a woman?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're no fun",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "can you sing?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what is up?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you are awesome!",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "say something funny",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "that wasn't true",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "that wasn't funny",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "will you be my best friend?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what are you doing right now?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i love music",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you are my favorite",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what did you do today?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "tell me a joke",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what do you think of me?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "give me a fist bump",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you gay?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you male?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "which baseball teams do you like?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm tired of you",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "hi cortana",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i am bored",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i have 7 cats",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you know any tunes?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're not funny",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "no, that's not true",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what do you like to eat?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you have a name?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "can you sleep?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "are you a robot?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you have a sister?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "hahaha",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm afraid i'm gonna have to let you go.",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "can you read my mind?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what are you doing?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "don't you ever sleep?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "give me another joke",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "look at how smart you are",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i'm sad today",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "do you have brothers?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i just want to go to sleep",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "my sincere thanks",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "can you hear me now?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "why do you think that?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "how high can you count?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what do you think about love?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what do you do?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i love getting valentines",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "i will be back",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "what do you want to know about me?",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "you're useless",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "awesome",
+      "intent": "q_Gartner - Magic Quadrant",
+      "entities": []
+    },
+    {
+      "text": "how do i know if gartner covers my technology? which analysts may be interested in my vendor briefing?",
+      "intent": "q_Gartner - Vendor Briefings",
+      "entities": []
+    },
+    {
+      "text": "what if i have multiple vendor briefing topics?",
+      "intent": "q_Gartner - Vendor Briefings",
+      "entities": []
+    },
+    {
+      "text": "do i need to submit a completed application for each request?",
+      "intent": "q_Gartner - Vendor Briefings",
+      "entities": []
+    },
+    {
+      "text": "may i schedule a vendor briefing to take place at a gartner summit or symposium event?",
+      "intent": "q_Gartner - Vendor Briefings",
+      "entities": []
+    },
+    {
+      "text": "is it necessary to use the gartner web conferencing platform?",
+      "intent": "q_Gartner - Vendor Briefings",
+      "entities": []
+    },
+    {
+      "text": "what can i expect as a gartner vendor client?",
+      "intent": "q_Gartner - Vendor Briefings",
+      "entities": []
+    },
+    {
+      "text": "may i submit my request through my account executive?",
+      "intent": "q_Gartner - Vendor Briefings",
+      "entities": []
+    },
+    {
+      "text": "how does gartner handle non-disclosure agreements (ndas) and information under embargo?",
+      "intent": "q_Gartner - Vendor Briefings",
+      "entities": []
+    }
+  ],
+  "settings": []
+}

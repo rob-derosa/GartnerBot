@@ -1,0 +1,47 @@
+{
+  "authoringRegion": "westus",
+  "culture": "en-us",
+  "hierarchical": true,
+  "services": [
+    {
+      "kbId": "2b79b3ca-af80-4bd1-9f8e-4a733835bf97",
+      "subscriptionKey": "061df6df0a564793b6d0a70ee7d21edf",
+      "hostname": "https://gartnerfaqs.azurewebsites.net/qnamaker",
+      "endpointKey": "293605f7-4e95-48ce-b54a-bbc44dae6c6d",
+      "type": "qna",
+      "name": "Gartner - Vendor Briefings",
+      "id": "1"
+    },
+    {
+      "kbId": "6badc119-f547-4905-b0dc-d3d569214260",
+      "subscriptionKey": "061df6df0a564793b6d0a70ee7d21edf",
+      "hostname": "https://gartnerfaqs.azurewebsites.net/qnamaker",
+      "endpointKey": "293605f7-4e95-48ce-b54a-bbc44dae6c6d",
+      "type": "qna",
+      "name": "Gartner - Magic Quadrant",
+      "id": "2"
+    },
+    {
+      "appId": "b0a3e888-696b-4a4b-9301-59170229aaa9",
+      "authoringKey": "b95b75f1b7de44ecb90e25ca758008cc",
+      "subscriptionKey": "b95b75f1b7de44ecb90e25ca758008cc",
+      "version": "0.1",
+      "region": "westus",
+      "type": "luis",
+      "name": "GartnerInformationDiscovery",
+      "id": "3"
+    }
+  ],
+  "serviceIds": [
+    "1",
+    "2",
+    "3"
+  ],
+  "appId": "9fa25edc-317e-41af-8e70-ac9bf7cfeb32",
+  "authoringKey": "b95b75f1b7de44ecb90e25ca758008cc",
+  "subscriptionKey": "b95b75f1b7de44ecb90e25ca758008cc",
+  "version": "Dispatch",
+  "region": "westus",
+  "type": "dispatch",
+  "name": "GartnerWebBotDispatch"
+}
