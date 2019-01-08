@@ -1,5 +1,4 @@
-﻿using GartnerBot.Bot;
-using GartnerBot.Middleware;
+﻿using GartnerBot.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Bot.Builder;
@@ -10,6 +9,7 @@ using Microsoft.Bot.Configuration;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.Threading;
 
 namespace GartnerBot
 {
@@ -46,41 +46,28 @@ namespace GartnerBot
 
 			services.AddSingleton(_ => Configuration);
 
-            services.AddBot<GartnerBot.Bot.Bot>(options =>
+            services.AddBot<GartnerBot.Bot>(options =>
             {
                 options.CredentialProvider = new ConfigurationCredentialProvider(Configuration);
 
-                // The CatchExceptionMiddleware provides a top-level exception handler for your bot. 
-                // Any exceptions thrown by other Middleware, or by your OnTurn method, will be 
-                // caught here. To facillitate debugging, the exception is sent out, via Trace, 
-                // to the emulator. Trace activities are NOT displayed to users, so in addition
-                // an "Ooops" message is sent. 
-                // options.Middleware.Add(new CatchExceptionMiddleware<Exception>(async (context, exception) =>
-                // {
-                //     await context.TraceActivity("Bot Exception", exception);
-                //     await context.SendActivity($"Sorry, it looks like something went wrong: {exception.Message}");
-                // }));
+				options.OnTurnError = async (turnContext, exception) =>
+				{
+					Console.WriteLine(exception.ToString());
+					var activity = MessageFactory.Text(exception.GetBaseException().Message);
+					activity.ApplyConversationReference(turnContext.Activity.GetConversationReference());
+					await turnContext.Adapter.SendActivitiesAsync(turnContext, new[] { activity }, default(CancellationToken));
+				};
 
-                // The Memory Storage used here is for local bot debugging only. When the bot
-                // is restarted, anything stored in memory will be gone. 
-                IStorage dataStore = new MemoryStorage();
+				// The Memory Storage used here is for local bot debugging only. When the bot
+				// is restarted, anything stored in memory will be gone. 
+				IStorage dataStore = new MemoryStorage();
+				// var conversationState = new ConversationState(dataStore);
+				// options.State.Add(conversationState);
 
-				// The File data store, shown here, is suitable for bots that run on 
-				// a single machine and need durable state across application restarts.                 
-				// IStorage dataStore = new FileStorage(System.IO.Path.GetTempPath());
-
-				// For production bots use the Azure Table Store, Azure Blob, or 
-				// Azure CosmosDB storage provides, as seen below. To include any of 
-				// the Azure based storage providers, add the Microsoft.Bot.Builder.Azure 
-				// Nuget package to your solution. That package is found at:
-				//      https://www.nuget.org/packages/Microsoft.Bot.Builder.Azure/
-
-				// IStorage dataStore = new Microsoft.Bot.Builder.Azure.AzureTableStorage("AzureTablesConnectionString", "TableName");
-				// IStorage dataStore = new Microsoft.Bot.Builder.Azure.AzureBlobStorage("AzureBlobConnectionString", "containerName");
-
-				// Handoff middleware
+				// Add middleware
 				options.Middleware.Add(new TryDispatchMiddleware(Configuration, botConfig));
 				options.Middleware.Add(new HandoffMiddleware(Configuration));
+
             });
 
             services.AddMvc(); // Required Razor pages

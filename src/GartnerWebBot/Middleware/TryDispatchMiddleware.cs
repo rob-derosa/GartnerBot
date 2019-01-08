@@ -7,13 +7,21 @@ using System.Threading.Tasks;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.AI.Luis;
 using Microsoft.Bot.Builder.AI.QnA;
+using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Configuration;
+using Microsoft.Bot.Connector;
+using Microsoft.Bot.Connector.Authentication;
 using Microsoft.Bot.Schema;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json.Linq;
 
 public class TryDispatchMiddleware : IMiddleware
 {
+	#region Properties
+
+	string _isWatching;
+	string _didHandoff;
+	string _didAskForHandoff;
 	string _conenctToAgent = "Would you like to connect to an analyst?";
 
 	Dictionary<string, QnAMaker> _qnaMakerServices;
@@ -66,7 +74,6 @@ public class TryDispatchMiddleware : IMiddleware
 		}
 	}
 
-
 	LuisRecognizer _dispatchService;
 	LuisRecognizer DispatchService
 	{
@@ -100,6 +107,8 @@ public class TryDispatchMiddleware : IMiddleware
 		protected set;
 	}
 
+	#endregion
+
 	public TryDispatchMiddleware(IConfiguration configuration, BotConfiguration botConfig)
 	{
 		Configuration = configuration;
@@ -108,20 +117,65 @@ public class TryDispatchMiddleware : IMiddleware
 
 	async public Task OnTurnAsync(ITurnContext context, NextDelegate next, CancellationToken cancellationToken = default(CancellationToken))
 	{
-		if (context.Activity.Type == ActivityTypes.Message && !context.Responded)
-		{
-			//Get the intent recognition result
-			var recognizerResult = await DispatchService.RecognizeAsync(context, cancellationToken);
-			var topIntent = recognizerResult?.GetTopScoringIntent();
+		Console.WriteLine(context.Activity.Type);
 
-			if (topIntent == null)
-			{
-				await context.SendActivityAsync($"I'm not quite sure what you mean. {_conenctToAgent}");
-			}
-			else
-			{
-				await DispatchToTopIntentAsync(context, topIntent, cancellationToken);
-			}
+		switch (context.Activity.Type)
+		{
+			case ActivityTypes.ConversationUpdate:
+
+				if(context.Activity.MembersAdded != null)
+				{
+					var msg = "Hi! I'm Gartner Bot. You can ask me questions about vendor briefings or the magic quadrant process. I can also find reports for you if you ask me 'get me the top 5 reports about mobile development based on IDE'.";
+					foreach (var newMember in context.Activity.MembersAdded)
+					{
+						if (newMember.Id != context.Activity.Recipient.Id)
+						{
+							await context.SendActivityAsync(msg);
+						}
+					}
+				}
+
+				break;
+
+			case ActivityTypes.Message :
+
+				if (_didHandoff == context.Activity.From.Id || _isWatching == context.Activity.From.Id)
+				{
+					await next.Invoke(cancellationToken);
+					return;
+				}
+
+				if(context.Activity.Text == "watch")
+				{
+					_isWatching = context.Activity.From.Id;
+					context.Activity.Text = "command watch";
+					await next.Invoke(cancellationToken);
+					return;
+				}
+
+				if(_didAskForHandoff == context.Activity.From.Id && context.Activity.Text.Equals("yes", StringComparison.InvariantCultureIgnoreCase))
+				{
+					_didHandoff = context.Activity.From.Id;
+					//User indicated they want to be connected to live agent
+					
+					context.Activity.Text = "human";
+					await next.Invoke(cancellationToken);
+					return;
+				}
+
+				//Get the intent recognition result
+				var recognizerResult = await DispatchService.RecognizeAsync(context, cancellationToken);
+				var topIntent = recognizerResult?.GetTopScoringIntent();
+
+				if (topIntent == null)
+				{
+					await AskForHandoff(context, "I'm not quite sure what you mean.");
+				}
+				else
+				{
+					await DispatchToTopIntentAsync(context, topIntent, cancellationToken);
+				}
+				break;
 		}
 
 		//await next(cancellationToken).ConfigureAwait(false);
@@ -153,7 +207,7 @@ public class TryDispatchMiddleware : IMiddleware
 
 			default:
 				// The intent didn't match any case, so just display the recognition results.
-				await context.SendActivityAsync($"I was unable to find an answer across all knowledge bases. {_conenctToAgent}");
+				await AskForHandoff(context, "I was unable to find an answer across all knowledge bases.");
 				Console.WriteLine($"Dispatch intent: {topIntent.Value.intent} ({topIntent.Value.score}).");
 				break;
 		}
@@ -183,7 +237,7 @@ public class TryDispatchMiddleware : IMiddleware
 			}
 			else
 			{
-				await context.SendActivityAsync($"I was unable to determine an intent. {_conenctToAgent}");
+				await AskForHandoff(context, "I was unable to determine an intent.");
 			}
 		}
 	}
@@ -199,9 +253,14 @@ public class TryDispatchMiddleware : IMiddleware
 			}
 			else
 			{
-				await context.SendActivityAsync($"I was unable to find an answer in the {kbName}. {_conenctToAgent}");
+				await AskForHandoff(context, "I was unable to find an answer across all knowledge bases.");
 			}
 		}
+	}
+	async Task AskForHandoff(ITurnContext context, string message)
+	{
+		_didAskForHandoff = context.Activity.From.Id;
+		await context.SendActivityAsync($"{message} {_conenctToAgent}");
 	}
 
 	T GetEntity<T>(RecognizerResult luisResult, string entityKey)

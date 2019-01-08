@@ -5,6 +5,7 @@ using Microsoft.Bot.Builder;
 using Microsoft.Bot.Connector.Authentication;
 using Microsoft.Bot.Schema;
 using Microsoft.Extensions.Configuration;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -93,6 +94,8 @@ namespace GartnerBot.Middleware
 		public async Task OnTurnAsync(ITurnContext context, NextDelegate next, CancellationToken cancellationToken = default(CancellationToken))
 		{
             Activity activity = context.Activity;
+
+			Console.WriteLine(activity.Text);
 
             if (activity.Type is ActivityTypes.Message)
             {

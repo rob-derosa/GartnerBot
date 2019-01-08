@@ -211,7 +211,7 @@
     <value>Unfortunately your request could not be processed</value>
   </data>
   <data name="NotifyClientWaitForRequestHandling" xml:space="preserve">
-    <value>Please wait for your request to be accepted</value>
+    <value>Ok, I'm looking for an analyst right now...</value>
   </data>
   <data name="NotifyOwnerConnected" xml:space="preserve">
     <value>You are now connected to user "{0}"</value>
