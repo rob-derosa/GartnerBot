@@ -120,8 +120,8 @@ namespace GartnerBot.CommandHandling
             HeroCard card = new HeroCard()
             {
                 Title = Strings.ConnectionRequestTitle,
-                Subtitle = string.Format(Strings.RequestorDetailsTitle, requestorChannelAccountName, requestorChannelId),
-                Text = string.Format(Strings.AcceptRejectConnectionHint, acceptCommand.ToString(), rejectCommand.ToString()),
+                //Subtitle = string.Format(Strings.RequestorDetailsTitle, requestorChannelAccountName, requestorChannelId),
+                //Text = string.Format(Strings.AcceptRejectConnectionHint, acceptCommand.ToString(), rejectCommand.ToString()),
 
                 Buttons = new List<CardAction>()
                 {

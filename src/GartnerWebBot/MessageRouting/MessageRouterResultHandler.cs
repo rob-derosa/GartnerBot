@@ -73,9 +73,14 @@ namespace GartnerBot.MessageRouting
             switch (connectionRequestResult.Type)
             {
                 case ConnectionRequestResultType.Created:
-                    foreach (ConversationReference aggregationChannel
+					await _messageRouter.SendMessageAsync(
+						connectionRequest.Requestor, Strings.NotifyClientWaitForRequestHandling);
+					
+					var list = _messageRouter.RoutingDataManager.GetAggregationChannels();
+					foreach (ConversationReference aggregationChannel
                         in _messageRouter.RoutingDataManager.GetAggregationChannels())
                     {
+
                         ConversationReference botConversationReference =
                             _messageRouter.RoutingDataManager.FindConversationReference(
                                 aggregationChannel.ChannelId, aggregationChannel.Conversation.Id, null, true);
@@ -97,8 +102,6 @@ namespace GartnerBot.MessageRouting
                         }
                     }
 
-                    await _messageRouter.SendMessageAsync(
-                        connectionRequest.Requestor, Strings.NotifyClientWaitForRequestHandling);
                     return true;
 
                 case ConnectionRequestResultType.AlreadyExists:
