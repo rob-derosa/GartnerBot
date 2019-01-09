@@ -133,7 +133,7 @@
     <value>This channel/conversation will no longer receive requests</value>
   </data>
   <data name="AggregationChannelSet" xml:space="preserve">
-    <value>This channel/conversation is now where the requests are aggregated</value>
+    <value>Great, we'll route any new requests your way</value>
   </data>
   <data name="AlreadyConnectedWithUser" xml:space="preserve">
     <value>You are already connected with user "{0}"</value>
@@ -214,10 +214,10 @@
     <value>Ok, I'm looking for an analyst right now...</value>
   </data>
   <data name="NotifyOwnerConnected" xml:space="preserve">
-    <value>You are now connected to user "{0}"</value>
+    <value>You are now connected to user {0}</value>
   </data>
   <data name="NotifyOwnerDisconnected" xml:space="preserve">
-    <value>You are now disconnected from the conversation with user "{0}"</value>
+    <value>You are now disconnected from the conversation with user {0}</value>
   </data>
   <data name="NotifyOwnerRequestRejected" xml:space="preserve">
     <value>Request from user "{0}" rejected</value>

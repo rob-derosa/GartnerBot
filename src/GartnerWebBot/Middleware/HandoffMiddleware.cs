@@ -95,8 +95,6 @@ namespace GartnerBot.Middleware
 		{
             Activity activity = context.Activity;
 
-			Console.WriteLine(activity.Text);
-
             if (activity.Type is ActivityTypes.Message)
             {
                 bool.TryParse(
@@ -116,7 +114,7 @@ namespace GartnerBot.Middleware
 
                     // Let the message router route the activity, if the sender is connected with
                     // another user/bot
-                    messageRouterResult = await MessageRouter.RouteMessageIfSenderIsConnectedAsync(activity);
+                    messageRouterResult = await MessageRouter.RouteMessageIfSenderIsConnectedAsync(activity, false);
 
                     if (messageRouterResult is MessageRoutingResult
                         && (messageRouterResult as MessageRoutingResult).Type == MessageRoutingResultType.NoActionTaken)

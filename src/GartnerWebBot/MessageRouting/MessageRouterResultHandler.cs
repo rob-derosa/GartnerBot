@@ -156,6 +156,9 @@ namespace GartnerBot.MessageRouting
                     {
                         if (connection.ConversationReference1 != null)
                         {
+							//Agent
+							connection.ConversationReference2.User.Name = "Stephanie";
+
                             await _messageRouter.SendMessageAsync(
                                 connection.ConversationReference1,
                                 string.Format(Strings.NotifyOwnerConnected,
@@ -164,7 +167,10 @@ namespace GartnerBot.MessageRouting
 
                         if (connection.ConversationReference2 != null)
                         {
-                            await _messageRouter.SendMessageAsync(
+							//User
+							connection.ConversationReference1.User.Name = "Analyst Annie";
+
+							await _messageRouter.SendMessageAsync(
                                 connection.ConversationReference2,
                                 string.Format(Strings.NotifyOwnerConnected,
                                     GetNameOrId(connection.ConversationReference1)));

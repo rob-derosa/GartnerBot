@@ -145,10 +145,11 @@ public class TryDispatchMiddleware : IMiddleware
 					return;
 				}
 
-				if(context.Activity.Text == "watch")
+				if(context.Activity.Text == "agent-sign-in")
 				{
 					_isWatching = context.Activity.From.Id;
 					context.Activity.Text = "command watch";
+					context.Activity.From.Role = "agent";
 					await next.Invoke(cancellationToken);
 					return;
 				}
@@ -159,6 +160,7 @@ public class TryDispatchMiddleware : IMiddleware
 					//User indicated they want to be connected to live agent
 					
 					context.Activity.Text = "human";
+					context.Activity.From.Role = "user";
 					await next.Invoke(cancellationToken);
 					return;
 				}
@@ -232,6 +234,11 @@ public class TryDispatchMiddleware : IMiddleware
 						var msg = $"Ok, I will email you {count} reports about {topic} based and sorted on {weight}";
 						await context.SendActivityAsync(msg, cancellationToken: cancellationToken);
 
+						break;
+
+					case "None" :
+
+						await AskForHandoff(context, "It sounds like you might need a human to help out.");
 						break;
 				}
 			}
