@@ -7,7 +7,7 @@
 - Agent Handoff to route end-user to a live agent when the user's intent or question cannot be addressed
 
 ## Azure Services Architecture
-![Bot Service Architecture](https://github.com/rob-derosa/GartnerBot/blob/master/assets/bot_service_architecture.png?raw=true)
+![Bot Service Architecture](https://github.com/rob-derosa/GartnerBot/blob/master/assets/bot_architecture.png?raw=true)
  
 
 #### This sample incorporated code from the following sources:
