@@ -14,7 +14,7 @@
         },
         {
             "type": "blob",
-            "connectionString": "DefaultEndpointsProtocol=https;AccountName=gartnerwebbot84ec;AccountKey=sE6AkY8m1xo1HDCQTtt0W7FYFDXhikuspaxjcbVtZ9zoh4aH1dJ+OsMP4uNsndmAbJpea7FrV0fwLL6yAPBbdw==;",
+            "connectionString": "cP7ZmLvAKPRP/rCd6Psl+w==!0VLRQMjJaIq+QIIue9W/J8ZaeGN5T7f06BQ5FipdGqp9sHrfcvdYmEvM4RKiJTMDeiTSqB84vkRXz6Wo8g6NGQKk45PohZmdVN2lTgPNyPltZUNmroy4j0BMd4uy2zAJN/d4Be4dfGj+Xk2Z2UjLS/kyOdE+KseZcKuHyUnsszbdC2rAxPKbvAYkB6HNixyk9fbYOa5Abe+xp3kJuI8pNvraSrtDd+GB7vOAJUFSah4=",
             "id": "2",
             "resourceGroup": "GartnerWebBot",
             "serviceName": "gartnerwebbot84ec",
@@ -24,7 +24,7 @@
         {
             "type": "endpoint",
             "appId": "43624e79-a678-44b2-a0d4-932ed96a8b85",
-            "appPassword": "gd8^tb{mkvilh!;d",
+            "appPassword": "4Nlx92qCdGtd6kNW4uQtYA==!uG9gJ8jOFSRGVqZO9535w3IRQB6IudO1yZ2C/kZEFp0=",
             "endpoint": "http://localhost:3978/api/messages",
             "id": "3",
             "name": "development"
@@ -32,7 +32,7 @@
         {
             "type": "endpoint",
             "appId": "43624e79-a678-44b2-a0d4-932ed96a8b85",
-            "appPassword": "gd8^tb{mkvilh!;d",
+            "appPassword": "D5YwJ3f2eVOSxwUJPAywMQ==!6gO5ZqqVPpPag4aKlS3XTzX8JYeUCRsNih92Ab7GezQ=",
             "endpoint": "https://gartner-bot.azurewebsites.net/api/messages",
             "id": "4",
             "name": "production"
@@ -42,7 +42,7 @@
             "apiKeys": {},
             "applicationId": "aa00638e-f49f-4530-b64c-3914c581bebe",
             "id": "5",
-            "instrumentationKey": "5bb883ea-a5c5-4ecb-bc6b-afb70a7f8b07",
+            "instrumentationKey": "ErRocgXnI6AJ2HvmKuFY0Q==!doHV1UPyEHXXHZfCKDOR8iejL1/quHGdOQ37isK09tezTDa/Jg0BOHoxximpPlHu",
             "resourceGroup": "GartnerWebBot",
             "serviceName": "GartnerWebBotqq4vz5",
             "subscriptionId": "b28c99c8-06ab-46c2-9e66-cf1874299828",
@@ -50,45 +50,45 @@
         },
         {
             "type": "qna",
-            "endpointKey": "293605f7-4e95-48ce-b54a-bbc44dae6c6d",
+            "endpointKey": "FQdJBPkCHOkjjqBGaFU1yQ==!Ov7ds4i7wj3iPNVYPfyiaKt2HVWx93D44d69mNi+aASWnhK64Pnwu+UThzUHO2i6",
             "hostname": "https://gartnerfaqs.azurewebsites.net/qnamaker",
             "id": "2b79b3ca-af80-4bd1-9f8e-4a733835bf97",
             "kbId": "2b79b3ca-af80-4bd1-9f8e-4a733835bf97",
             "name": "Gartner - Vendor Briefings",
-            "subscriptionKey": "061df6df0a564793b6d0a70ee7d21edf"
+            "subscriptionKey": "1giSVtOQ9+cA/o5EdazPTw==!CNGGfdcVcfi6B8OuHPndghnLksLZ09NjBTh6HGK+WNCBkHdr/V3kO0E2F/iBaYu3"
         },
         {
             "type": "qna",
-            "endpointKey": "293605f7-4e95-48ce-b54a-bbc44dae6c6d",
+            "endpointKey": "WIedrNszbsrJ//5Ls7tOhg==!uIxd9XgDxMknTpSLZUGQA0ZXMrhV2bsBdzgUBaRRlXnRXt0hlovfjNn8yLDMoumQ",
             "hostname": "https://gartnerfaqs.azurewebsites.net/qnamaker",
             "id": "6badc119-f547-4905-b0dc-d3d569214260",
             "kbId": "6badc119-f547-4905-b0dc-d3d569214260",
             "name": "Gartner - Magic Quadrant",
-            "subscriptionKey": "061df6df0a564793b6d0a70ee7d21edf"
+            "subscriptionKey": "x3foc0re5wj+DzXuHAFXxg==!MhOIKARXulfiG5fr5T+k5s/ulceuI8DQgwFeLzH4Is3ORUX1lr6I64MQU2BZFLUP"
         },
         {
             "type": "dispatch",
             "appId": "9fa25edc-317e-41af-8e70-ac9bf7cfeb32",
-            "authoringKey": "b95b75f1b7de44ecb90e25ca758008cc",
+            "authoringKey": "qv03XD8NSKfMEP3KzK1y9w==!Vva+wwSWIcNEkWpRKYT4Qj7ayEUgCKYN0v2Gy2hyHSiintogin8d01Eb6Ml5+2vt",
             "id": "9fa25edc-317e-41af-8e70-ac9bf7cfeb32",
             "name": "GartnerWebBotDispatch",
             "region": "westus",
             "serviceIds": [],
-            "subscriptionKey": "b95b75f1b7de44ecb90e25ca758008cc",
+            "subscriptionKey": "cVZab1JEz7QKeBrl+beWqw==!yLB9DXm35V9r4Y+ZWQyIVEwJaRIwn4MwsNVaGgeAqnaU1LexSp6UWao3R9D83Lh1",
             "version": "Dispatch"
         },
         {
             "type": "luis",
             "appId": "b0a3e888-696b-4a4b-9301-59170229aaa9",
-            "authoringKey": "b95b75f1b7de44ecb90e25ca758008cc",
+            "authoringKey": "yHy07yWQStY6YzrfBV3USw==!BaaeSotyUhRGHLocNVNCYIrV57CpFkr7v3xP6TUrOC+1025VCfxUB+DIFJ9uC2o7",
             "id": "b0a3e888-696b-4a4b-9301-59170229aaa9",
             "name": "GartnerInformationDiscovery",
             "region": "westus",
-            "subscriptionKey": "b95b75f1b7de44ecb90e25ca758008cc",
+            "subscriptionKey": "FM16kAQV2xXfjg1ccBousg==!pYEg1UTy9177N6m+44pRQ8n4R8sB5BjCnWrm+BcxHvAqeOBQmhhc/gKvgPusF6c+",
             "version": "0.1"
         }
     ],
-    "padlock": "",
+    "padlock": "gzPHqUDdYXnGmAc5ZtRF+A==!fK2s6WKgDhrNcbQZi5AENORV5sHS+VZKj/bCJO4ljwhFNu9KRQlsKbUBXXbMyZxK",
     "version": "2.0",
     "overrides": null,
     "path": "/Volumes/Data/Projects/GartnerBot/src/GartnerWebBot/BotConfiguration.bot"
