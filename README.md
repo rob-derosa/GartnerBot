@@ -1,7 +1,7 @@
 # Gartner Bot
 
 ### This sample incorporates the following:
-- QnA Maker for injested FAQ intelligent search
+- QnA Maker for injested FAQ intelligent search with chit-chat
 - LUIS for natural language intent extraction
 - Dispatch to create one cohesive LUIS model used to determine which QnA Maker knowledge base or LUIS model to query
 - Agent Handoff to route end-user to a live agent when the user's intent or question cannot be addressed
